@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+mkdocs = "1.5.3"
+mkdocs-material = "9.5.3"
+pymdown-extensions = "*"
+material = "*"
+mkdocs-drawio-exporter = "*"
+mkdocs-mermaid2-plugin = "*"
+mkdocs-table-reader-plugin = "*"
+mkdocs-minify-html-plugin = "*"
+mkdocs-git-revision-date-localized-plugin = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.13"
+python_full_version = "3.13.2"

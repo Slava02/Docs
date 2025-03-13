@@ -108,6 +108,23 @@ plugins:
       type: datetime
 
 nav:
-  - Overview:
-      - Onboarding: index.md
-  
+  - Обзор:
+      - Возможности: 
+        - index.md
+  - Собесы:
+    - Базы данных:
+            - Общее:
+                - ACID: 
+                    - interview/databases/general/acid.md
+                - Блокировки: 
+                    - interview/databases/general/blocks.md
+                - Индексы: 
+                    - interview/databases/general/indexes.md
+                - Журналирование: 
+                    - interview/databases/general/wal.md
+    - Скрининг:
+        - Технические вопросы: 
+            - interview/screening/hard.md
+
+        
+            
