@@ -1,0 +1,113 @@
+# @format
+
+site_name: Документация
+repo_url: https://github.com/Slava02/Docs
+repo_name: Docs
+edit_uri: -/tree/main/mkdocs/docs
+docs_dir: docs
+theme:
+  name: material
+  language: ru
+  font:
+    text: Roboto
+  icon:
+    annotation: material/chevron-right-circle
+    repo: fontawesome/brands/gitlab
+  palette:
+    # Palette toggle for light mode
+    - scheme: slate
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: default
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.indexes
+    - navigation.prune
+    # - navigation.sections
+    # - navigation.expand
+    # - toc.integrate
+    # - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tooltips
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - abbr
+  - attr_list
+  - def_list
+  - md_in_html
+  - admonition
+  - tables
+  - pymdownx.details
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+      title: ""
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.betterem
+  - pymdownx.snippets:
+      base_path:
+        - mkdocs/snippets
+      check_paths: false
+  - pymdownx.tabbed:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+
+plugins:
+  - search:
+      lang:
+        - en
+        - ru
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+#  - drawio-exporter:
+#      cache_dir: 'drawio-exporter'
+#      drawio_executable: drawio
+#      sources: '*.drawio'
+#      drawio_args:
+#        - --no-sandbox
+  - minify_html
+  - mermaid2
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: datetime
+
+nav:
+  - Overview:
+      - Onboarding: index.md
+  
