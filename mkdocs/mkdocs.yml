@@ -109,22 +109,47 @@ plugins:
 
 nav:
   - Обзор:
-      - Возможности: 
-        - index.md
+      - Возможности: index.md
   - Собесы:
-    - Базы данных:
-            - Общее:
-                - ACID: 
-                    - interview/databases/general/acid.md
-                - Блокировки: 
-                    - interview/databases/general/blocks.md
-                - Индексы: 
-                    - interview/databases/general/indexes.md
-                - Журналирование: 
-                    - interview/databases/general/wal.md
-    - Скрининг:
-        - Технические вопросы: 
-            - interview/screening/hard.md
-
-        
-            
+      - GO:
+          - Concurrency:
+              - Теория:
+                  - Каналы: interview/go/concurrency/theory/channels/channels.md
+                  - Планировщик: interview/go/concurrency/theory/sheduller/sheduller.md
+              - Задачи: 
+                  - Поиск бага: interview/go/concurrency/problems/findBugs/findBugs.md
+                  - Базовые: interview/go/concurrency/problems/shorts/shorts.md
+          - Live Coding: interview/go/liveCoding/complex.md
+          - Базовые типы:
+              - Map:
+                  - Теория: interview/go/types/map/theory/Как_устроены_мапы.md
+                  - Задачи:
+                      - Поиск бага: interview/go/types/map/problems/findBugs/findBugs.md
+                      - Базовые: interview/go/types/map/problems/short/short.md
+              - Interface:
+                  - Теория: interview/go/types/interface/theory/iface.md
+                  - Вопросы: interview/go/types/interface/theory/qs.md
+                  - Задачи:
+                      - Базовые: interview/go/types/interface/problems/short.md
+      - Базы данных:
+          - Общее:
+              - Типы: interview/storages/general/types.md
+              - OLAP VS OLTP: interview/databases/general/olapVSoltp.md
+              - ACID: interview/databases/general/acid.md
+              - Блокировки: interview/databases/general/blocks.md
+              - Индексы: interview/databases/general/indexes.md
+              - Журналирование: interview/databases/general/wal.md
+          - Брокеры:
+              - Общая информация: interview/databases/brokers/brokers.md
+          - Кеширование:
+              - Общая информация: interview/databases/brokers/caching.md
+          - Распределенные данные:
+              - CAP-теорема: interview/storages/distributedStorages/CAP.md
+              - Партиционирование: interview/storages/distributedStorages/partitioning.md
+              - Шардирование: interview/storages/distributedStorages/sharding.md
+              - Репликация: interview/storages/distributedStorages/replication.md
+      - Системный дизайн:
+          - API: interview/systemDesign/api/api.md
+          - Балансировка нагрузки: interview/systemDesign/balancing/balancing.md
+      - Скрининг:
+          - Технические вопросы: interview/screening/hard.md
